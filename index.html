@@ -175,15 +175,21 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
     .hero-topbar { display: none; }
 }
 
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-bottom:30px}
-.gal a{display:block;position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:4px;border:1px solid var(--p-border);background:var(--p-lav);cursor:zoom-in}
-.gal img{width:100%;height:100%;object-fit:cover;transition:.25s}
-.gal a:hover img{transform:scale(1.05)}
-.gal span{position:absolute;left:8px;bottom:8px;background:rgba(11,37,69,.78);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:1.5px;padding:3px 8px;border-radius:2px}
-#lb{position:fixed;inset:0;background:rgba(11,37,69,.92);display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;z-index:99;padding:20px}
-#lb.on{display:flex}#lb img{max-width:94vw;max-height:80vh;border-radius:4px}
-#lb .bar{display:flex;gap:18px;align-items:center;color:#fff;font-size:.8rem}
-#lb button,#lb a{background:rgba(255,255,255,.14);border:0;color:#fff;padding:8px 14px;border-radius:3px;cursor:pointer;font:inherit;text-decoration:none}
+.carousel{max-width:780px;margin:0 auto 40px}
+.car-row{display:flex;align-items:center;justify-content:center;height:440px}
+.car-side{width:110px;height:84%;flex-shrink:0;border-radius:4px;overflow:hidden;filter:blur(4px);opacity:.5;transform:scale(.94);cursor:pointer;transition:filter .3s ease,opacity .3s ease,transform .3s ease;background:var(--p-navy)}
+.car-side:hover{opacity:.75}
+.car-side img{width:100%;height:100%;object-fit:cover;display:block}
+.car-side.left{mask-image:linear-gradient(to left,rgba(0,0,0,1) 30%,rgba(0,0,0,0));-webkit-mask-image:linear-gradient(to left,rgba(0,0,0,1) 30%,rgba(0,0,0,0));margin-right:-18px}
+.car-side.right{mask-image:linear-gradient(to right,rgba(0,0,0,1) 30%,rgba(0,0,0,0));-webkit-mask-image:linear-gradient(to right,rgba(0,0,0,1) 30%,rgba(0,0,0,0));margin-left:-18px}
+.car-stage{position:relative;width:340px;max-width:56vw;height:100%;flex-shrink:0;background:var(--p-navy);border-radius:4px;overflow:hidden;cursor:pointer;box-shadow:0 15px 35px rgba(11,37,69,.22);z-index:2}
+.car-stage img{width:100%;height:100%;object-fit:contain;display:block;transition:opacity .25s ease}
+.car-nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.9);color:var(--p-navy);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2}
+.car-nav:hover{background:#fff}.car-nav.prev{left:12px}.car-nav.next{right:12px}
+.car-counter{position:absolute;bottom:12px;right:14px;background:rgba(11,37,69,.65);color:#fff;font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px}
+.car-caption{text-align:center;padding:14px 10px 2px}
+#carPdv{font-size:1rem;font-weight:800;color:var(--p-navy)}#carMeta{font-size:.78rem;color:var(--p-gray);margin-top:3px}
+@media(max-width:640px){.car-nav{width:36px;height:36px}.car-side{display:none}.car-stage{max-width:88vw}}
 </style></head><body>
 <header class="hero">
   <div class="hero-topbar">
@@ -279,9 +285,20 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
 </div>
 
 <div class="section-hero"><div class="num">04</div><h2 class="section-title">Galería <em>de fotos</em></h2></div>
-<p class="section-sub">17 fotografías de la actividad. Haz clic en una imagen para ampliarla.</p>
-<div class="gal"><a href="https://drive.google.com/file/d/1NxpFmBFP98SYj77y3OqOFho94e1FTRdO/view" data-id="1NxpFmBFP98SYj77y3OqOFho94e1FTRdO" data-n="1"><img loading="lazy" alt="Foto 1" src="https://drive.google.com/thumbnail?id=1NxpFmBFP98SYj77y3OqOFho94e1FTRdO&sz=w600"><span>FOTO 01</span></a><a href="https://drive.google.com/file/d/1WRF53TCN9px4GRifAVK4e-7NMCXInn8d/view" data-id="1WRF53TCN9px4GRifAVK4e-7NMCXInn8d" data-n="2"><img loading="lazy" alt="Foto 2" src="https://drive.google.com/thumbnail?id=1WRF53TCN9px4GRifAVK4e-7NMCXInn8d&sz=w600"><span>FOTO 02</span></a><a href="https://drive.google.com/file/d/1usS8KmVSdAiOsdLZq_0t80R6iE4ZOvQl/view" data-id="1usS8KmVSdAiOsdLZq_0t80R6iE4ZOvQl" data-n="3"><img loading="lazy" alt="Foto 3" src="https://drive.google.com/thumbnail?id=1usS8KmVSdAiOsdLZq_0t80R6iE4ZOvQl&sz=w600"><span>FOTO 03</span></a><a href="https://drive.google.com/file/d/1UNQ5KPGxhTOMZpOMSZEjClRXOsf-iSBK/view" data-id="1UNQ5KPGxhTOMZpOMSZEjClRXOsf-iSBK" data-n="4"><img loading="lazy" alt="Foto 4" src="https://drive.google.com/thumbnail?id=1UNQ5KPGxhTOMZpOMSZEjClRXOsf-iSBK&sz=w600"><span>FOTO 04</span></a><a href="https://drive.google.com/file/d/1qxjT4nkU-D5sqOgen9wYlzfUgG5n3p1x/view" data-id="1qxjT4nkU-D5sqOgen9wYlzfUgG5n3p1x" data-n="5"><img loading="lazy" alt="Foto 5" src="https://drive.google.com/thumbnail?id=1qxjT4nkU-D5sqOgen9wYlzfUgG5n3p1x&sz=w600"><span>FOTO 05</span></a><a href="https://drive.google.com/file/d/1BxDu3aQboD16a-hgPw4dKa5z6xNkzsiP/view" data-id="1BxDu3aQboD16a-hgPw4dKa5z6xNkzsiP" data-n="6"><img loading="lazy" alt="Foto 6" src="https://drive.google.com/thumbnail?id=1BxDu3aQboD16a-hgPw4dKa5z6xNkzsiP&sz=w600"><span>FOTO 06</span></a><a href="https://drive.google.com/file/d/1vAzLzxEUqonRrQV_Q0zBWLGMKRoKQjlC/view" data-id="1vAzLzxEUqonRrQV_Q0zBWLGMKRoKQjlC" data-n="7"><img loading="lazy" alt="Foto 7" src="https://drive.google.com/thumbnail?id=1vAzLzxEUqonRrQV_Q0zBWLGMKRoKQjlC&sz=w600"><span>FOTO 07</span></a><a href="https://drive.google.com/file/d/1AKA5xewLD8Y_VgwQuIk6z3EbKtBWdnzY/view" data-id="1AKA5xewLD8Y_VgwQuIk6z3EbKtBWdnzY" data-n="8"><img loading="lazy" alt="Foto 8" src="https://drive.google.com/thumbnail?id=1AKA5xewLD8Y_VgwQuIk6z3EbKtBWdnzY&sz=w600"><span>FOTO 08</span></a><a href="https://drive.google.com/file/d/1hw19rLgPBTfCROh97ESVk-0YuZIj8KPB/view" data-id="1hw19rLgPBTfCROh97ESVk-0YuZIj8KPB" data-n="9"><img loading="lazy" alt="Foto 9" src="https://drive.google.com/thumbnail?id=1hw19rLgPBTfCROh97ESVk-0YuZIj8KPB&sz=w600"><span>FOTO 09</span></a><a href="https://drive.google.com/file/d/1CsPAGaVCr3boGRlrn04pF78S2u4xEacE/view" data-id="1CsPAGaVCr3boGRlrn04pF78S2u4xEacE" data-n="10"><img loading="lazy" alt="Foto 10" src="https://drive.google.com/thumbnail?id=1CsPAGaVCr3boGRlrn04pF78S2u4xEacE&sz=w600"><span>FOTO 10</span></a><a href="https://drive.google.com/file/d/1k2WdlbxKGRqDENeoBUi4sXaMDJ-lfLak/view" data-id="1k2WdlbxKGRqDENeoBUi4sXaMDJ-lfLak" data-n="11"><img loading="lazy" alt="Foto 11" src="https://drive.google.com/thumbnail?id=1k2WdlbxKGRqDENeoBUi4sXaMDJ-lfLak&sz=w600"><span>FOTO 11</span></a><a href="https://drive.google.com/file/d/18YWtQ52x9zgicbJavqnb1hKt6M5pMaaA/view" data-id="18YWtQ52x9zgicbJavqnb1hKt6M5pMaaA" data-n="12"><img loading="lazy" alt="Foto 12" src="https://drive.google.com/thumbnail?id=18YWtQ52x9zgicbJavqnb1hKt6M5pMaaA&sz=w600"><span>FOTO 12</span></a><a href="https://drive.google.com/file/d/12dbRbkN7orBMGp0X9Lahw9B3Ch-KTU7l/view" data-id="12dbRbkN7orBMGp0X9Lahw9B3Ch-KTU7l" data-n="13"><img loading="lazy" alt="Foto 13" src="https://drive.google.com/thumbnail?id=12dbRbkN7orBMGp0X9Lahw9B3Ch-KTU7l&sz=w600"><span>FOTO 13</span></a><a href="https://drive.google.com/file/d/1A2M-rCichbxSq4EZ8Pz29paOGd0zNyaN/view" data-id="1A2M-rCichbxSq4EZ8Pz29paOGd0zNyaN" data-n="14"><img loading="lazy" alt="Foto 14" src="https://drive.google.com/thumbnail?id=1A2M-rCichbxSq4EZ8Pz29paOGd0zNyaN&sz=w600"><span>FOTO 14</span></a><a href="https://drive.google.com/file/d/1s_tpDcjQ-WLhiB4u1NFpYgjtnMUDeOTw/view" data-id="1s_tpDcjQ-WLhiB4u1NFpYgjtnMUDeOTw" data-n="15"><img loading="lazy" alt="Foto 15" src="https://drive.google.com/thumbnail?id=1s_tpDcjQ-WLhiB4u1NFpYgjtnMUDeOTw&sz=w600"><span>FOTO 15</span></a><a href="https://drive.google.com/file/d/1DiHlA-gJRe-qLMK1gTIUkFcMFNGa3S9r/view" data-id="1DiHlA-gJRe-qLMK1gTIUkFcMFNGa3S9r" data-n="16"><img loading="lazy" alt="Foto 16" src="https://drive.google.com/thumbnail?id=1DiHlA-gJRe-qLMK1gTIUkFcMFNGa3S9r&sz=w600"><span>FOTO 16</span></a><a href="https://drive.google.com/file/d/1afeB6HXGvEpW00jcFAc-pCg8l8NLOC6O/view" data-id="1afeB6HXGvEpW00jcFAc-pCg8l8NLOC6O" data-n="17"><img loading="lazy" alt="Foto 17" src="https://drive.google.com/thumbnail?id=1afeB6HXGvEpW00jcFAc-pCg8l8NLOC6O&sz=w600"><span>FOTO 17</span></a></div>
-<div id="lb"><img alt=""><div class="bar"><button id="pv">‹ Anterior</button><span id="ct"></span><a id="dr" target="_blank" rel="noopener">Abrir en Drive</a><button id="nx">Siguiente ›</button><button id="cl">Cerrar ✕</button></div></div>
+<p class="section-sub">Registro fotográfico de la actividad. Va rotando solo, o dale clic para pasar a la siguiente.</p>
+<div class="carousel">
+  <div class="car-row">
+    <div class="car-side left" id="carSideLeft"><img id="carImgPrev" src="" alt="" referrerpolicy="no-referrer"></div>
+    <div class="car-stage" id="carStage">
+      <button class="car-nav prev" id="carPrev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+      <img id="carImg" src="" alt="" referrerpolicy="no-referrer">
+      <button class="car-nav next" id="carNext" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="car-counter" id="carCounter"></div>
+    </div>
+    <div class="car-side right" id="carSideRight"><img id="carImgNext" src="" alt="" referrerpolicy="no-referrer"></div>
+  </div>
+  <div class="car-caption"><div id="carPdv"></div><div id="carMeta"></div></div>
+</div>
 <div class="strategy-box">
   <div class="kick">Cierre del periodo</div>
   <h3>Conclusiones y recomendaciones</h3>
@@ -317,11 +334,23 @@ const RC={'Fibrapro 125 g':'#a12b2b','Fibrapro 250 g':BLUE,'Fibrapro 500 g':'#a8
 new Chart(document.getElementById('chartInvR'),{type:'line',data:{labels:JL,datasets:Object.entries(D.invRef).map(([k,v])=>({label:k,data:v,borderColor:RC[k],backgroundColor:RC[k],pointRadius:4,tension:0}))},options:{maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font,color:SLATE,boxWidth:12}},datalabels:{display:false}},scales:{y:{...axisGrid,ticks:{...axisGrid.ticks,callback:N}},x:axisPlain}}});
 new Chart(document.getElementById('chartM'),{type:'bar',data:{labels:['Vie 02','Lun 05','Vie 09'],datasets:[{label:'Fibrapro 60 g',data:D.mFib,backgroundColor:BLUE,borderRadius:3},{label:'Manzana 60 g',data:D.mMan,backgroundColor:MINT,borderRadius:3}]},options:{maintainAspectRatio:false,layout:{padding:{top:16}},plugins:{legend:{position:'bottom',labels:{font,color:SLATE,boxWidth:12}},datalabels:{...dl(NAVY,'end','end'),display:c=>c.raw>0}},scales:{y:{...axisGrid,beginAtZero:true},x:axisPlain}}});
 
-(function(){const L=[...document.querySelectorAll('.gal a')],lb=document.getElementById('lb'),im=lb.querySelector('img');let k=0;
-const show=i=>{k=(i+L.length)%L.length;const a=L[k];im.src='https://drive.google.com/thumbnail?id='+a.dataset.id+'&sz=w1600';document.getElementById('ct').textContent='Foto '+(k+1)+' de '+L.length;document.getElementById('dr').href=a.href;lb.classList.add('on')};
-L.forEach((a,i)=>a.addEventListener('click',e=>{e.preventDefault();show(i)}));
-document.getElementById('pv').onclick=()=>show(k-1);document.getElementById('nx').onclick=()=>show(k+1);document.getElementById('cl').onclick=()=>lb.classList.remove('on');
-lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('on')});
-document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(k-1);if(e.key==='ArrowRight')show(k+1)});})();
+const GALERIA = [{"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1NxpFmBFP98SYj77y3OqOFho94e1FTRdO=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1WRF53TCN9px4GRifAVK4e-7NMCXInn8d=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1usS8KmVSdAiOsdLZq_0t80R6iE4ZOvQl=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1UNQ5KPGxhTOMZpOMSZEjClRXOsf-iSBK=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1qxjT4nkU-D5sqOgen9wYlzfUgG5n3p1x=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1BxDu3aQboD16a-hgPw4dKa5z6xNkzsiP=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1vAzLzxEUqonRrQV_Q0zBWLGMKRoKQjlC=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1AKA5xewLD8Y_VgwQuIk6z3EbKtBWdnzY=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1hw19rLgPBTfCROh97ESVk-0YuZIj8KPB=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1CsPAGaVCr3boGRlrn04pF78S2u4xEacE=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1k2WdlbxKGRqDENeoBUi4sXaMDJ-lfLak=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/18YWtQ52x9zgicbJavqnb1hKt6M5pMaaA=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/12dbRbkN7orBMGp0X9Lahw9B3Ch-KTU7l=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1A2M-rCichbxSq4EZ8Pz29paOGd0zNyaN=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1s_tpDcjQ-WLhiB4u1NFpYgjtnMUDeOTw=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1DiHlA-gJRe-qLMK1gTIUkFcMFNGa3S9r=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1afeB6HXGvEpW00jcFAc-pCg8l8NLOC6O=w1600"}];
+let carIndex=0,carTimer=null;
+function mostrarCarrusel(){const v=GALERIA[carIndex];if(!v)return;
+ const prevV=GALERIA[(carIndex-1+GALERIA.length)%GALERIA.length],nextV=GALERIA[(carIndex+1)%GALERIA.length];
+ const img=document.getElementById('carImg');img.style.opacity=0;
+ const pre=new Image();pre.referrerPolicy='no-referrer';pre.onload=function(){img.src=v.url;img.style.opacity=1;};pre.src=v.url;
+ document.getElementById('carImgPrev').src=prevV.url;document.getElementById('carImgNext').src=nextV.url;
+ document.getElementById('carPdv').textContent=v.pdv;document.getElementById('carMeta').textContent=v.meta;
+ document.getElementById('carCounter').textContent=(carIndex+1)+' / '+GALERIA.length;}
+function carSiguiente(){carIndex=(carIndex+1)%GALERIA.length;mostrarCarrusel();}
+function carAnterior(){carIndex=(carIndex-1+GALERIA.length)%GALERIA.length;mostrarCarrusel();}
+function reiniciarAutoplay(){clearInterval(carTimer);carTimer=setInterval(carSiguiente,4000);}
+document.getElementById('carNext').addEventListener('click',function(e){e.stopPropagation();carSiguiente();reiniciarAutoplay();});
+document.getElementById('carPrev').addEventListener('click',function(e){e.stopPropagation();carAnterior();reiniciarAutoplay();});
+document.getElementById('carStage').addEventListener('click',function(e){if(e.target.closest('.car-nav'))return;carSiguiente();reiniciarAutoplay();});
+document.getElementById('carSideLeft').addEventListener('click',function(){carAnterior();reiniciarAutoplay();});
+document.getElementById('carSideRight').addEventListener('click',function(){carSiguiente();reiniciarAutoplay();});
+mostrarCarrusel();reiniciarAutoplay();
 </script>
 </body></html>
