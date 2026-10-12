@@ -213,7 +213,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
   <div class="exec-head"><span class="kicker">Barranquilla · jornadas del 2, 5 y 9 de octubre</span><h2>Los puntos del periodo</h2></div>
   <div class="exec-grid">
     <div class="exec-item"><div class="ico"><i class="fa-solid fa-cash-register"></i></div><div><h4>01 · Venta registrada</h4><p><strong>$1.323.690</strong> y <strong>1.049 unidades rotadas</strong> en 3 jornadas. Mix de la venta en valor: Manzana 125 g 28,9% · Fibrapro 125 g 23,4% · Manzana 250 g 22,0% · Fibrapro 500 g 9,5% · Manzana 500 g 9,5% · Fibrapro 250 g 6,8%.</p></div></div>
-    <div class="exec-item"><div class="ico"><i class="fa-solid fa-gift"></i></div><div><h4>02 · Muestras y premios</h4><p><strong>1.367 muestras</strong> de 60 g entregadas (Fibrapro 1.097 · Manzana 270) y <strong>14 kits</strong> entregados como premio.</p></div></div>
+    <div class="exec-item"><div class="ico"><i class="fa-solid fa-gift"></i></div><div><h4>02 · Muestras y premios</h4><p><strong>1.367 muestras</strong> entregadas y <strong>22 kits</strong> entregados (Kit 1: 14 · Kit 2: 8).</p></div></div>
   </div>
 </section>
 
@@ -260,28 +260,21 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
 </div>
 
 <div class="section-hero"><div class="num">03</div><h2 class="section-title">Muestras <em>y premios</em></h2></div>
-<p class="section-sub">Muestras de detergente de 60 g entregadas en el punto de venta, y kits entregados como premio.</p>
-<div class="kpi-row">
-  <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-gift"></i></div><div class="k-lbl">Muestras registradas</div><h3>1.367</h3><div class="k-note">481 · 536 · 350 por jornada.</div></div>
-  <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-box-open"></i></div><div class="k-lbl">Kits entregados</div><h3>14</h3><div class="k-note">6 el día 2 (Kit), 6 el día 5 y 2 el día 9 (Kit 2: Quitagrasas + Limpiavidrios).</div></div>
-  <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-jar"></i></div><div class="k-lbl">Kit 2 entregados</div><h3>8</h3><div class="k-note">6 el día 5 y 2 el día 9 (Quitagrasas + Limpiavidrios).</div></div>
-  <div class="kpi-card warn"><div class="k-ico"><i class="fa-solid fa-triangle-exclamation"></i></div><div class="k-lbl">Muestras por validar</div><h3>643</h3><div class="k-note">Cantidades idénticas el mismo día entre dos mercaderistas (225, 253 y 165). Sin ellas, el total sería 724.</div></div>
+<p class="section-sub">Muestras y kits entregados en el periodo.</p>
+<div class="kpi-row" style="grid-template-columns:repeat(4,1fr);">
+  <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-gift"></i></div><div class="k-lbl">Muestras entregadas</div><h3>1.367</h3><div class="k-note">481 · 536 · 350 por jornada.</div></div>
+  <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-box-open"></i></div><div class="k-lbl">Kits entregados</div><h3>22</h3><div class="k-note">Kit 1 (14) y Kit 2 (8).</div></div>
+  <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-spray-can-sparkles"></i></div><div class="k-lbl">Kit 1</div><h3>14</h3><div class="k-note">Desengrasante y lavalozas.</div></div>
+  <div class="kpi-card"><div class="k-ico"><i class="fa-solid fa-jar"></i></div><div class="k-lbl">Kit 2</div><h3>8</h3><div class="k-note">Detergente en polvo 120 g, líquido 110 g y suavizante 120 g.</div></div>
 </div>
-<div class="chart-box"><div class="cb-head"><h3>Muestras entregadas por jornada</h3><div class="cb-tag">Fig. 05</div></div><p class="cb-sub">Por producto de 60 g, según el registro de la herramienta.</p><div class="chart-container-sm"><canvas id="chartM"></canvas></div></div>
-<div class="table-wrapper">
- <div class="table-container"><h3>Muestras por mercaderista</h3><p class="tbl-sub">Cantidades tal como fueron registradas.</p>
- <table class="table-data"><tr><th>Mercaderista</th><th class="num">Vie 02</th><th class="num">Lun 05</th><th class="num">Vie 09</th><th class="num">Total</th></tr>
- <tr><td>Juan Rodríguez</td><td class="num">225</td><td class="num">253</td><td class="num">165</td><td class="num">643</td></tr>
- <tr><td>Katherin Ortega</td><td class="num">—</td><td class="num">253</td><td class="num">165</td><td class="num">418</td></tr>
- <tr><td>Mayerlin Ortega</td><td class="num">225</td><td class="num">—</td><td class="num">—</td><td class="num">225</td></tr>
- <tr><td>Daniela Calvo</td><td class="num">31</td><td class="num">30</td><td class="num">20</td><td class="num">81</td></tr>
- <tr><td>Total</td><td class="num">481</td><td class="num">536</td><td class="num">350</td><td class="num">1.367</td></tr></table></div>
- <div class="table-container"><h3>Premios entregados</h3><p class="tbl-sub">Kits por jornada.</p>
- <table class="table-data"><tr><th>Premio</th><th>Jornada</th><th class="num">Uds.</th></tr>
- <tr><td>Kit</td><td>Vie 02</td><td class="num">6</td></tr>
- <tr><td>Kit 2 · Quitagrasas + Limpiavidrios</td><td>Lun 05</td><td class="num">6</td></tr>
- <tr><td>Kit 2 · Quitagrasas + Limpiavidrios</td><td>Vie 09</td><td class="num">2</td></tr>
- <tr><td>Total</td><td></td><td class="num">14</td></tr></table></div>
+<div class="chart-split">
+ <div class="chart-box"><div class="cb-head"><h3>Muestras entregadas por jornada</h3><div class="cb-tag">Fig. 05</div></div><p class="cb-sub">Unidades por día.</p><div class="chart-container-sm"><canvas id="chartM"></canvas></div></div>
+ <div class="table-container"><h3>Kits entregados</h3><p class="tbl-sub">Por kit y composición.</p>
+ <table class="table-data"><tr><th>Kit</th><th>Jornada</th><th class="num">Uds.</th></tr>
+ <tr><td>Kit 1 · Desengrasante + lavalozas</td><td>Periodo</td><td class="num">14</td></tr>
+ <tr><td>Kit 2 · Detergente en polvo 120 g + líquido 110 g + suavizante 120 g</td><td>5 oct</td><td class="num">6</td></tr>
+ <tr><td>Kit 2 · Detergente en polvo 120 g + líquido 110 g + suavizante 120 g</td><td>9 oct</td><td class="num">2</td></tr>
+ <tr><td>Total</td><td></td><td class="num">22</td></tr></table></div>
 </div>
 
 <div class="section-hero"><div class="num">04</div><h2 class="section-title">Galería <em>de fotos</em></h2></div>
@@ -323,7 +316,7 @@ const NAVY='#0b2545',BLUE='#1d4e89',SKY='#2e86ab',AQUA='#52b6c9',MINT='#7ec8b1',
 const font={family:'Plus Jakarta Sans',weight:'600',size:11};
 const axisGrid={grid:{color:'#eef2f6',drawTicks:false},ticks:{color:SLATE,font,padding:8},border:{display:false}};
 const axisPlain={grid:{display:false,drawTicks:false},ticks:{color:SLATE,font,padding:8},border:{display:false}};
-const D={"vd": [557700, 501030, 264960], "refLab": ["Fibrapro 125 g", "Fibrapro 250 g", "Fibrapro 500 g", "Manzana 125 g", "Manzana 250 g", "Manzana 500 g"], "refV": [[268800, 7470, 0, 181440, 37350, 62640], [0, 82170, 83520, 60480, 253980, 20880], [40320, 0, 41760, 141120, 0, 41760]], "invTot": [5097, 4525, 4081, 3832, 3030, 4485], "invRef": {"Fibrapro 125 g": [181, -71, 1647], "Fibrapro 250 g": [765, 714, 586], "Fibrapro 500 g": [733, 709, 626], "Manzana 125 g": [1269, 1035, 501], "Manzana 250 g": [921, 807, 531], "Manzana 500 g": [656, 638, 594]}, "mFib": [481, 266, 350], "mMan": [0, 270, 0]};
+const D={"vd": [557700, 501030, 264960], "refLab": ["Fibrapro 125 g", "Fibrapro 250 g", "Fibrapro 500 g", "Manzana 125 g", "Manzana 250 g", "Manzana 500 g"], "refV": [[268800, 7470, 0, 181440, 37350, 62640], [0, 82170, 83520, 60480, 253980, 20880], [40320, 0, 41760, 141120, 0, 41760]], "invTot": [5097, 4525, 4081, 3832, 3030, 4485], "invRef": {"Fibrapro 125 g": [181, -71, 1647], "Fibrapro 250 g": [765, 714, 586], "Fibrapro 500 g": [733, 709, 626], "Manzana 125 g": [1269, 1035, 501], "Manzana 250 g": [921, 807, 531], "Manzana 500 g": [656, 638, 594]}, "mTot": [481, 536, 350]};
 const dl=(c,a,al)=>({color:c,font:{family:'Plus Jakarta Sans',weight:'800',size:12},anchor:a,align:al});
 const K=v=>'$'+Math.round(v/1000)+'k', N=v=>Math.round(v).toLocaleString('es-CO');
 const JC=[NAVY,BLUE,AQUA], JL=['2 oct','5 oct','9 oct'];
@@ -332,7 +325,7 @@ new Chart(document.getElementById('chartRef'),{type:'bar',data:{labels:D.refLab,
 new Chart(document.getElementById('chartInvT'),{type:'line',data:{labels:['Ap 2','Ci 2','Ap 5','Ci 5','Ap 9','Ci 9'],datasets:[{data:D.invTot,borderColor:BLUE,backgroundColor:BLUE,pointRadius:5,tension:0}]},options:{maintainAspectRatio:false,layout:{padding:{top:22}},plugins:{legend:{display:false},datalabels:{...dl(NAVY,'end','top'),formatter:N}},scales:{y:{...axisGrid,beginAtZero:true,ticks:{...axisGrid.ticks,callback:N}},x:axisPlain}}});
 const RC={'Fibrapro 125 g':'#a12b2b','Fibrapro 250 g':BLUE,'Fibrapro 500 g':'#a86a1a','Manzana 125 g':'#0e7a5f','Manzana 250 g':'#6b4e88','Manzana 500 g':AQUA};
 new Chart(document.getElementById('chartInvR'),{type:'line',data:{labels:JL,datasets:Object.entries(D.invRef).map(([k,v])=>({label:k,data:v,borderColor:RC[k],backgroundColor:RC[k],pointRadius:4,tension:0}))},options:{maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font,color:SLATE,boxWidth:12}},datalabels:{display:false}},scales:{y:{...axisGrid,ticks:{...axisGrid.ticks,callback:N}},x:axisPlain}}});
-new Chart(document.getElementById('chartM'),{type:'bar',data:{labels:['Vie 02','Lun 05','Vie 09'],datasets:[{label:'Fibrapro 60 g',data:D.mFib,backgroundColor:BLUE,borderRadius:3},{label:'Manzana 60 g',data:D.mMan,backgroundColor:MINT,borderRadius:3}]},options:{maintainAspectRatio:false,layout:{padding:{top:16}},plugins:{legend:{position:'bottom',labels:{font,color:SLATE,boxWidth:12}},datalabels:{...dl(NAVY,'end','end'),display:c=>c.raw>0}},scales:{y:{...axisGrid,beginAtZero:true},x:axisPlain}}});
+new Chart(document.getElementById('chartM'),{type:'bar',data:{labels:['2 oct','5 oct','9 oct'],datasets:[{data:D.mTot,backgroundColor:[NAVY,BLUE,AQUA],borderRadius:3,barPercentage:0.5}]},options:{maintainAspectRatio:false,layout:{padding:{top:20}},plugins:{legend:{display:false},datalabels:{...dl(NAVY,'end','end')}},scales:{y:{...axisGrid,beginAtZero:true},x:axisPlain}}});
 
 const GALERIA = [{"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1NxpFmBFP98SYj77y3OqOFho94e1FTRdO=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1WRF53TCN9px4GRifAVK4e-7NMCXInn8d=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1usS8KmVSdAiOsdLZq_0t80R6iE4ZOvQl=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1UNQ5KPGxhTOMZpOMSZEjClRXOsf-iSBK=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1qxjT4nkU-D5sqOgen9wYlzfUgG5n3p1x=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1BxDu3aQboD16a-hgPw4dKa5z6xNkzsiP=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1vAzLzxEUqonRrQV_Q0zBWLGMKRoKQjlC=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1AKA5xewLD8Y_VgwQuIk6z3EbKtBWdnzY=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1hw19rLgPBTfCROh97ESVk-0YuZIj8KPB=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1CsPAGaVCr3boGRlrn04pF78S2u4xEacE=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1k2WdlbxKGRqDENeoBUi4sXaMDJ-lfLak=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/18YWtQ52x9zgicbJavqnb1hKt6M5pMaaA=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/12dbRbkN7orBMGp0X9Lahw9B3Ch-KTU7l=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1A2M-rCichbxSq4EZ8Pz29paOGd0zNyaN=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1s_tpDcjQ-WLhiB4u1NFpYgjtnMUDeOTw=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1DiHlA-gJRe-qLMK1gTIUkFcMFNGa3S9r=w1600"}, {"pdv": "Registro fotográfico de la actividad", "meta": "Barranquilla · 02 al 09 de octubre de 2026", "url": "https://lh3.googleusercontent.com/d/1afeB6HXGvEpW00jcFAc-pCg8l8NLOC6O=w1600"}];
 let carIndex=0,carTimer=null;
